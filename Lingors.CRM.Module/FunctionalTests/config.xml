@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Applications>
+		<!-- Web -->
+		<Application
+			Name="Lingors.CRMWeb"
+			UseIISExpress="True"
+			Url="http://localhost:4030"
+			PhysicalPath="[WebAppBin]"
+			AdapterFileName="[WebAdapterAssemblyPath]"
+			IgnoreCase="true"/>
+		<!-- For IIS -->
+		<!--
+		<Application
+			Name="Lingors.CRMWeb"
+			Url="http://localhost/Lingors.CRM.Web/Default.aspx"
+			AdapterFileName="[WebAdapterAssemblyPath]"
+			IgnoreCase="true"/>
+		-->
+	</Applications>
+	<TestDatabases>
+		<Database xsi:type="TestMSSQLDatabase" Server="(localdb)\mssqllocaldb" DBName="Lingors.CRMEasyTest"/>
+	</TestDatabases>
+
+	<Aliases>
+		<Alias Name="WebAdapterAssemblyPath" Value="[WebAppBin]\Bin\DevExpress.ExpressApp.EasyTest.SeleniumWebAdapter.v21.2.dll" />
+		<Alias Name="WebAppBin" Value="[ConfigPath]\..\..\Lingors.CRM.Web" />
+	</Aliases>
+</Options>
